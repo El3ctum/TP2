@@ -1,0 +1,21 @@
+﻿@page
+@model PessoaModel
+@{
+    ViewData["Title"] = "Pessoa";
+}
+
+<link rel="stylesheet" href="~/css/Pessoa.css" />
+
+<h1>@ViewData["Title"]</h1>
+
+@foreach (var pessoa in Model.Pessoas)
+{
+    <table>    
+        <tr>
+            <td class="nome">@pessoa.Nome</td>
+            <td class="idade">@pessoa.Idade</td>
+            <td class="cpf">@pessoa.CPF</td>
+        </tr>
+    </table>
+
+}
